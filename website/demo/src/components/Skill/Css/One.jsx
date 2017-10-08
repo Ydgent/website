@@ -32,7 +32,7 @@ class CssComponent extends React.Component {
     super(props);
   }
   componentDidMount() {
-    $.get("https://ydgent.github.io/study/elemo/README.md", (response, status, xhr) => { 
+    $.get("https://ydgent.github.io/website/demo/Md/cxeshi.md", (response, status, xhr) => { 
       ReactDOM.findDOMNode(this.refs.divone).innerHTML = marked(response);
     });
   }
