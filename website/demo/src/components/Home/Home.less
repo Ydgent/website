@@ -1,0 +1,154 @@
+
+
+.lefticon {
+  text-align: center;
+  z-index: 9999;
+  color: rgb(255, 255, 255);
+  height: 24px;
+  position: absolute;
+  width: 100%;
+  line-height: 24px;
+  bottom: 10px;
+}
+
+.logo {
+  height: 96px;
+  width: 96px;
+  transform:rotateY(0deg);
+  border-radius: 96px;
+  margin: 50px auto 0px;
+  background: url(../../assets/头像.jpg) no-repeat center;
+  background-size: cover;
+  // transition: 2s;
+  // -webkit-transition: 2s; /* Safari */
+}
+.logo:hover {
+  transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+}
+.logotwo {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin: 25px auto;
+  background: url(../../assets/头像.jpg) no-repeat center;
+  background-size: cover;
+}
+.logotwo:hover {
+  transform:rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+}
+.header {
+  background: #fff;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+.content {
+  margin: 84px 16px 0;
+  overflow: initial;
+  min-height: 80vh;
+}
+.contentmove {
+  animation: contentmove 1s;
+  -webkit-animation: contentmove 1s; /* Safari and Chrome */
+}
+@keyframes contentmove
+{
+  0% {
+    opacity:0;
+    filter:Alpha(opacity=0); /* IE8 以及更早的浏览器 */
+  }
+  100% {
+    opacity:1;
+    filter:Alpha(opacity=100); /* IE8 以及更早的浏览器 */
+  }
+}
+
+@-webkit-keyframes contentmove /*Safari and Chrome*/
+{
+  0% {
+    opacity:0;
+    filter:Alpha(opacity=0); /* IE8 以及更早的浏览器 */
+  }
+  100% {
+    opacity:1;
+    filter:Alpha(opacity=100); /* IE8 以及更早的浏览器 */
+  }
+}
+
+a {
+  color: rgba(255, 255, 255, 0.67);
+}
+.white {
+  color: #fff;
+}
+
+.name {
+  text-align: center;
+  height: 40px;
+  line-height: 20px;
+  margin: 20px auto;
+  color: #fff;
+}
+.name_span_one {
+  display: inline-block;
+  animation: namemove infinite 12s;
+  -webkit-animation: namemove infinite 12s; /* Safari and Chrome */
+}
+.name_span_two {
+  display: inline-block;
+  animation: namemove infinite 12s;
+  -webkit-animation: namemove infinite 12s; /* Safari and Chrome */
+  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+}  
+@keyframes namemove
+{
+  0% {
+    color: #F0F8FF;
+    transform: rotateY(0deg);
+    -webkit-transform:rotateY(0deg); /* Safari and Chrome */
+  }
+  50% {
+    color: #0be2d2;
+    transform: rotateY(360deg);
+    -webkit-transform:rotateY(360deg); /* Safari and Chrome */
+  }
+  100% {
+    color: #F0F8FF;
+    transform: rotateY(0deg);
+    -webkit-transform:rotateY(0deg); /* Safari and Chrome */
+  }
+}
+
+@-webkit-keyframes namemove /*Safari and Chrome*/
+{
+  0% {
+    color: #F0F8FF;
+    transform: rotateY(0deg);
+    -webkit-transform:rotateY(0deg); /* Safari and Chrome */
+  }
+  50% {
+    color: #0be2d2;
+    transform: rotateY(360deg);
+    -webkit-transform:rotateY(360deg); /* Safari and Chrome */
+  }
+  100% {
+    color: #F0F8FF;
+    transform: rotateY(0deg);
+    -webkit-transform:rotateY(0deg); /* Safari and Chrome */
+  }
+}
+
+.name_two {
+  text-align: center;
+  height: 20px;
+  line-height: 10px;
+  margin: 10px auto;
+  color: #fff;
+  animation: namemove infinite 12s;
+  -webkit-animation: namemove infinite 12s; /* Safari and Chrome */
+}
+
