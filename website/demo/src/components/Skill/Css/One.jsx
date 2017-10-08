@@ -46,8 +46,8 @@ class CssComponent extends React.Component {
         </Breadcrumb>
         <div style={{padding: '10px 10px 10px 20px'}} >
           <Row>
-            <Col span={12}>
-              <div ref="divone" style={{height: 1000}} id="content"></div>
+            <Col span={20}>
+              <div ref="divone" id="content"></div>
             </Col>
           </Row>
         </div>

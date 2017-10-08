@@ -266,27 +266,8 @@ function f1() {
 
 ES6 允许块级作用域的任意嵌套。
 
-```javascript
-{{{{{let insane = 'Hello World'}}}}};
-```
-
 上面代码使用了一个五层的块级作用域。外层作用域无法读取内层作用域的变量。
 
-```javascript
-{{{{
-  {let insane = 'Hello World'}
-  console.log(insane); // 报错
-}}}};
-```
-
-内层作用域可以定义外层作用域的同名变量。
-
-```javascript
-{{{{
-  let insane = 'Hello World';
-  {let insane = 'Hello World'}
-}}}};
-```
 
 块级作用域的出现，实际上使得获得广泛应用的立即执行函数表达式（IIFE）不再必要了。
 
@@ -637,29 +618,3 @@ var getGlobal = function () {
   throw new Error('unable to locate global object');
 };
 ```
-
-现在有一个[提案](https://github.com/tc39/proposal-global)，在语言标准的层面，引入`global`作为顶层对象。也就是说，在所有环境下，`global`都是存在的，都可以从它拿到顶层对象。
-
-垫片库[`system.global`](https://github.com/ljharb/System.global)模拟了这个提案，可以在所有环境拿到`global`。
-
-```javascript
-// CommonJS 的写法
-require('system.global/shim')();
-
-// ES6 模块的写法
-import shim from 'system.global/shim'; shim();
-```
-
-上面代码可以保证各种环境里面，`global`对象都是存在的。
-
-```javascript
-// CommonJS 的写法
-var global = require('system.global')();
-
-// ES6 模块的写法
-import getGlobal from 'system.global';
-const global = getGlobal();
-```
-
-上面代码将顶层对象放入变量`global`。
-
